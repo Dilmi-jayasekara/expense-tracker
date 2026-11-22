@@ -1,0 +1,166 @@
+{
+  "info": {
+    "_postman_id": "07d78f7d-a3bd-4ea9-bb33-6ee557f632bb",
+    "name": "Expense_Tracker.postman_collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59448141",
+    "_collection_link": "https://go.postman.co/collection/59448141-07d78f7d-a3bd-4ea9-bb33-6ee557f632bb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "https://expense-tracker-backend.hostless.app/auth/register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://expense-tracker-backend.hostless.app/auth/register",
+          "protocol": "https",
+          "host": [
+            "expense-tracker-backend",
+            "hostless",
+            "app"
+          ],
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://expense-tracker-backend.hostless.app/api/expenses",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0hf2}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://expense-tracker-backend.hostless.app/api/expenses",
+          "protocol": "https",
+          "host": [
+            "expense-tracker-backend",
+            "hostless",
+            "app"
+          ],
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://expense-tracker-backend.hostless.app/api/expenses",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0hf2}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://expense-tracker-backend.hostless.app/api/expenses",
+          "protocol": "https",
+          "host": [
+            "expense-tracker-backend",
+            "hostless",
+            "app"
+          ],
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8081/api/expenses/summary?month=11&year=2026",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_08xy}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/expenses/summary?month=11&year=2026",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "expenses",
+            "summary"
+          ],
+          "query": [
+            {
+              "key": "month",
+              "value": "11"
+            },
+            {
+              "key": "year",
+              "value": "2026"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_0hf2",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_08xy",
+      "secret": true
+    }
+  ]
+}
